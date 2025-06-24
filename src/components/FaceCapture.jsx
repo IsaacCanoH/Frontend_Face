@@ -8,7 +8,7 @@ const FaceCapture = () => {
   const [hasReference, setHasReference] = useState(false);
   const [message, setMessage] = useState('');
 
-  const backendURL = 'http://localhost:3001';
+  const backendURL = 'https://backend-face-m7ls.onrender.com';
 
   // Cargar modelos de face-api.js
   useEffect(() => {
