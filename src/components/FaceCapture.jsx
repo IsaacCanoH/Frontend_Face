@@ -10,6 +10,8 @@ const FaceCapture = () => {
 
   const backendURL = 'https://backend-face-m7ls.onrender.com';
 
+  // das
+
   // Cargar modelos de face-api.js
   useEffect(() => {
     const loadModels = async () => {
@@ -86,8 +88,20 @@ const FaceCapture = () => {
 
   return (
     <div>
-      <video ref={videoRef} width="320" height="240" autoPlay muted />
-      <canvas ref={canvasRef} width="320" height="240" style={{ display: 'none' }} />
+      <video
+        ref={videoRef}
+        width="320"
+        height="240"
+        autoPlay
+        muted
+        style={{ transform: 'scaleX(-1)' }} // <-- ESPEJO
+      />
+      <canvas
+        ref={canvasRef}
+        width="320"
+        height="240"
+        style={{ display: 'none', transform: 'scaleX(-1)' }} // <-- opcional
+      />
       <br />
       <button onClick={startCamera}>Iniciar cámara</button>
       <button onClick={capturePhoto}>Capturar y verificar</button>
